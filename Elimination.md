@@ -31,29 +31,27 @@ Exercise 1: Prove J is an ideal!
 Special case of elimination!
 For a polynomial map ff from KK^s to KK^t
 The graph (as in the calculus sense) is the subset of KK^s x KK^t given by
-y_1 = f_1(x_1..x_s)
+x_1 = f_1(y_1..y_t)
 ..
-y_t = f_t(x_1..x_s)
+x_s = f_s(y_1..y_t)
 
-Q: Can we find and **implicit** description for this geometric object independent from the y variables?
+Q: Can we find and **implicit** description for this geometric object independent from the input variables (y's in this case)?
 
-Q-elimination: Is there a set of equations in the x's alone that describes the (closure) of the image of the polynomial map?
+Q-elimination language: Is there a set of equations in the x's alone that describes the (closure) of the image of the polynomial map?
 
-Q-comp: Can we eliminate the y's from the ideal
-(y_1 - f_1,.., y_t - f_t)?
+Q-computationally: Can we eliminate the y's from the ideal
+(x_1 - f_1,.., x_s - f_s)?
 
 ## How do we eliminate?
 TLDR: Lex or other dictionary orders!
 
-### Slightly longer version
-Variables that we want to keep should come first (cheap)
-
-Variables that we want to get rid of come last (expensive)
-
 ### Why?
-Use an "Elimination Order" that makes the y variables very expensive, and so they get stuck in trailing terms 
+Use an "Elimination Order" that makes the save variables very expensive, and so they get stuck in trailing terms 
 (if possible)
-if there is some polynomial only in the x's in the ideal, they are cheap and so they will lead
+
+In the Elimination order,
+if there is some some polynomial with initial term only in the save variables, 
+it will have a leading term in the save variables and all trailing terms in the save variables
 
 So the gb with this order will find the polys only in the x's 
 because they  will need to be there to generate the ideal of leading terms
@@ -67,7 +65,7 @@ is lex gb for Elimination ideal!
 
 Exercise 2: Prove it!
 
-## Application
+## Another application
 Consider the action of a finite group G on a polynomial ring R given by linear change of variables.
 So g.f(xx)=f(A_g xx) for A_g some matrix depending on g and xx the vector (x_1, ... x_n)
 

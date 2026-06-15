@@ -6,7 +6,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "intisar.macaulay2-codespace"
+        "coreysharris.macaulay2"
       ],
       "settings": {
         "macaulay2.executablePath": "/usr/bin/M2"
